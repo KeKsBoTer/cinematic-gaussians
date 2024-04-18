@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive Displays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/jpg" href="./static/img/icon.png">
+    <link rel="stylesheet" href="static/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.min.css">
+    <script src="static/js/all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <a class="navbar-item" href="https://www.cs.cit.tum.de/cg/people/niedermayr/">
+                    <span class="icon">
+                        <i class="fas fa-home"></i>
+                    </span>
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More Research
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://www.cs.cit.tum.de/cg/research/publications/">
+                            TUM Computer Graphics and Visualization
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 is-size-3-mobile publication-title">Novel View Synthesis for Cinematic
+                            Anatomy on Mobile and Immersive Displays</h1>
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block">
+                                <a href="https://www.cs.cit.tum.de/en/cg/people/niedermayr/">Simon
+                                    Niedermayr</a><sup>1</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://www.cs.cit.tum.de/en/cg/people/alumni/neuhauser/"> Christoph
+                                    Neuhauser</a><sup>1</sup>,
+                            </span>
+
+                            <span class="author-block">
+                                Kaloian Petkov<sup>2</sup>,
+                            </span>
+
+                            <span class="author-block">
+                                Klaus Engel<sup>2</sup>,
+                            </span>
+
+                            <span class="author-block">
+                                <a href="https://www.cs.cit.tum.de/en/cg/people/westermann/">Rüdiger
+                                    Westermann</a><sup>1</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Technical University of Munich</span>,
+                            <span class="author-block"><sup>2</sup>Siemens Healthineers</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- PDF Link. -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2401.02436.pdf"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2401.02436"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+                                <span class="link-block">
+                                    <a href="" class="external-link button  is-normal is-rounded is-dark" disabled>
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero teaser is-dark" style="background-color: black; min-height:300px">
+        <div class="hero-body" style="padding: 0;">
+            <div class="container" style="overflow-x: auto;">
+                <img loading="lazy" style="max-width: unset; object-position:center" src="static/img/preview.svg">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop is-mobile">
+            <!-- Abstract. -->
+            <div class="columns is-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        Interactive photorealistic visualization of 3D anatomy (i.e., Cinematic Anatomy) is used in
+                        medical education to explain the structure of
+                        the human body. It is currently restricted to frontal teaching scenarios, where the
+                        demonstrator needs a powerful GPU and high-speed
+                        access to a large storage device where the dataset is hosted. We demonstrate the use of
+                        novel view synthesis via compressed 3D
+                        Gaussian splatting to overcome this restriction and to enable students to perform cinematic
+                        anatomy on lightweight mobile devices
+                        and in virtual reality environments. We present an automatic approach for finding a set of
+                        images that captures all potentially seen
+                        structures in the data. By mixing closeup views with images from a distance, the splat
+                        representation can recover structures up to the
+                        voxel resolution. The use of Mip-Splatting enables smooth transitions when the focal length
+                        is increased. Even for GB datasets, the
+                        final renderable representation can usually be compressed to less than 70 MB, enabling
+                        interactive rendering on low-end devices using
+                        rasterization.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hero teaser is-light">
+        <div class="hero-body">
+            <div class="container">
+                <div class="is-centered">
+                    <h2 class="title is-3">Results</h2>
+                </div>
+                <div id="results-carousel" class="carousel results-carousel">
+                    <div class="item">
+                        <video poster="./static/videos/thumbnails/brain_2.jpeg" id="bonsai" autoplay controls muted loop
+                            playsinline height="100%">
+                            <source src="./static/videos/avc1/brain_2.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/brain_2.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/kidney_2.jpeg" id="bicycle" autoplay controls muted
+                            loop playsinline height="100%">
+                            <source src="./static/videos/avc1/kidney_2.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/kidney_2.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/whole_body_3.jpeg" id="garden" autoplay controls muted
+                            loop playsinline height="100%">
+                            <source src="./static/videos/avc1/whole_body_3.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/whole_body_3.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/whole_body_4.jpeg" autoplay controls muted loop
+                            playsinline preload="auto" height="100%">
+                            <source src="./static/videos/avc1/whole_body_4.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/whole_body_4.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/skull_1.jpeg" autoplay controls muted loop playsinline
+                            preload="auto" height="100%">
+                            <source src="./static/videos/avc1/skull_1.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/skull_1.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/kidney_1.jpeg" autoplay controls muted loop
+                            playsinline preload="auto" height="100%">
+                            <source src="./static/videos/avc1/kidney_1.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/kidney_1.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/whole_body_1.jpeg" autoplay controls muted loop
+                            playsinline preload="auto" height="100%">
+                            <source src="./static/videos/avc1/whole_body_1.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/whole_body_1.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                    <div class="item ">
+                        <video poster="./static/videos/thumbnails/whole_body_2.jpeg" autoplay controls muted loop
+                            playsinline preload="auto" height="100%">
+                            <source src="./static/videos/avc1/whole_body_2.mp4" type="video/mp4; codecs=avc1.64001E">
+                            <source src="./static/videos/av1/whole_body_2.mp4" type="video/mp4; codecs=av1">
+                        </video>
+                    </div>
+                </div>
+                <div class="is-centered" style="margin-top: 2rem;">
+                    <h1 class="is-3" style="text-align: center;">Real time novel view synthesis results for different
+                        scenes and presets.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container is-max-desktop is-mobile">
+            <div class="is-centered" style="margin-bottom: 3rem;">
+                <h2 class="title is-3">Method</h2>
+            </div>
+            <p style="margin-bottom:1em;">
+                Our pipeline starts with reading a medical dataset, for which
+                then one or multiple so-called presets are selected by the user. A preset
+                includes the transfer function setting as well as material classifications
+                and fixed clip planes that are used to reveal certain anatomical structures.
+                For each preset, a set of views capturing all potentially seen structures
+                in the data at varying resolution are computed. In this way,
+                also structures which are not seen when generating images with camera
+                positions on a surrounding sphere are recovered in the final object representation.
+            </p>
+            <p style="margin-bottom:1em;">
+                These views are handed over to a <a
+                    href="https://www.siemens-healthineers.com/services/customer-services/upskill-services/equipment-and-clinical-education/individual-education-and-practice/cinematic-anatomy">physically-based
+                    renderer</a>,
+                i.e., a volumetric path tracer, which renders one image for every view
+                using the corresponding preset. Once all images for a selected preset have been rendered, <a
+                    href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3DGS</a> is used to generate a set
+                of 3D
+                Gaussians with shape and appearance attributes so that their rendering
+                matches the given images. Once the Gaussians are optimized via differentiable rendering, they are
+                <a href="https://keksboter.github.io/c3dgs/">compressed using sensitivity-aware vector
+                    quantization and entropy encoding.</a>
+            </p>
+            <p style="margin-bottom:1em;">
+                The final compressed 3DGS representation is <a href="https://github.com/KeKsBoTer/web-splat">rendered
+                    with WebGPU</a> using GPU sorting and
+                rasterization of projected 2D splats, with a pixel shader that evaluates
+                and blends the 2D projections in image space.
+            </p>
+            <br>
+            <div class="is-centered ">
+                <img loading="lazy" src="static/img/pipeline.svg">
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section">
+        <div class="container is-max-desktop is-mobile">
+            <div class="is-centered" style="margin-bottom: 3rem;">
+                <h2 class="title is-3">Interactive Web Demo</h2>
+            </div>
+            <div class="columns is-centered has-text-centered is-multiline" id="demos">
+                <div class="column demo-card">
+                    <div class="card">
+                        <a target="_blank"
+                            href="https://anonymous-demo-user.github.io/cinematic-3dgs/viewer.html?file=./scenes/brain_preset2/point_cloud.npz&scene=./scenes/brain_preset2/cameras.json">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img loading="lazy" src="./static/img/thumbnails/brain_preset2_2.jpg"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="title is-4">Brain</div>
+                                        <div class="subtitle is-6">Preset 2</div>
+                                    </div>
+                                    <div class="media-center" style="width: 100%;">
+                                    </div>
+                                    <div class="media-right">
+                                        <span class="tag">
+                                            47 MB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="column demo-card">
+                    <div class="card">
+                        <a target="_blank"
+                            href="https://anonymous-demo-user.github.io/cinematic-3dgs/viewer.html?file=./scenes/kidney_preset1/point_cloud.npz&scene=./scenes/kidney_preset1/cameras.json">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img loading="lazy" src="./static/img/thumbnails/kidney_preset1_4.jpg"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="title is-4">Kidney</div>
+                                        <div class="subtitle is-6">Preset 1</div>
+                                    </div>
+                                    <div class="media-center" style="width: 100%;">
+                                    </div>
+                                    <div class="media-right">
+                                        <span class="tag">
+                                            5 MB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="column demo-card">
+                    <div class="card">
+                        <a target="_blank"
+                            href="https://anonymous-demo-user.github.io/cinematic-3dgs/viewer.html?file=./scenes/kidney_preset2/point_cloud.npz&scene=./scenes/kidney_preset2/cameras.json">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img loading="lazy" src="./static/img/thumbnails/kidney_preset2_2.jpg"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="title is-4">Kidney</div>
+                                        <div class="subtitle is-6">Preset 2</div>
+                                    </div>
+                                    <div class="media-center" style="width: 100%;">
+                                    </div>
+                                    <div class="media-right">
+                                        <span class="tag">
+                                            47 MB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="column demo-card">
+                    <div class="card">
+                        <a target="_blank"
+                            href="https://anonymous-demo-user.github.io/cinematic-3dgs/viewer.html?file=./scenes/whole_body_preset3/point_cloud.npz&scene=./scenes/whole_body_preset3/cameras.json">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img loading="lazy" src="./static/img/thumbnails/whole_body_preset3_2.jpg"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="title is-4">Full body</div>
+                                        <div class="subtitle is-6">Preset 3</div>
+                                    </div>
+                                    <div class="media-center" style="width: 100%;">
+                                    </div>
+                                    <div class="media-right">
+                                        <span class="tag">
+                                            21 MB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="column demo-card">
+                    <div class="card">
+                        <a target="_blank"
+                            href="https://anonymous-demo-user.github.io/cinematic-3dgs/viewer.html?file=./scenes/whole_body_preset4/point_cloud.npz&scene=./scenes/whole_body_preset4/cameras.json">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img loading="lazy" src="./static/img/thumbnails/whole_body_preset4_4.jpg"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="title is-4">Full body</div>
+                                        <div class="subtitle is-6">Preset 4</div>
+                                    </div>
+                                    <div class="media-center" style="width: 100%;">
+                                    </div>
+                                    <div class="media-right">
+                                        <span class="tag">
+                                            22 MB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="column demo-card">
+                    <div class="card">
+                        <a target="_blank"
+                            href="https://anonymous-demo-user.github.io/cinematic-3dgs/viewer.html?file=./scenes/skull_preset1/point_cloud.npz&scene=./scenes/skull_preset1/cameras.json">
+                            <div class="card-image">
+                                <figure class="image">
+                                    <img loading="lazy" src="./static/img/thumbnails/skull_preset1_4.jpg"
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content has-text-left">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="title is-4">Skull</div>
+                                        <div class="subtitle is-6">Preset 1</div>
+                                    </div>
+                                    <div class="media-center" style="width: 100%;">
+                                    </div>
+                                    <div class="media-right">
+                                        <span class="tag">
+                                            4 MB
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="is-centered" style="width: 100%;">
+                    <a href="https://anonymous-demo-user.github.io/cinematic-3dgs/">
+                        <p style="margin: 1rem;">All scenes used in the paper.</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="container is-max-desktop">
+
+            <div class="columns ">
+                <h2 class="title is-3">Examples</h2>
+            </div>
+            <div class="column">
+                <p>Image comparisons for the path traced images and our reconstruction. All images are from the
+                    test
+                    set.</p>
+            </div>
+            <div class="columns is-centered has-text-centered">
+                <!-- Visual Effects. -->
+                <div class="column">
+                    <div class="content">
+                        <div class="bal-container-small image-compare">
+
+                            <div class="bal-after">
+                                <img loading="lazy" src="./static/img/samples/brain_preset2_2/gt.png">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                    Ours
+                                </div>
+                                <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    69 MB
+                                </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 539px;">
+                                    <img loading="lazy" src="./static/img/samples/brain_preset2_2/render.png">
+                                    <div class="bal-beforePosition beforeLabel">
+                                        Ground Truth
+                                    </div>
+                                    <div class="bal-beforePosition beforeSize">
+                                        36.4 GB
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="bal-container-small image-compare">
+
+                            <div class="bal-after">
+                                <img loading="lazy" src="./static/img/samples/kidney_preset2_2/render.png">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                    Ours
+                                </div>
+                                <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    31 MB
+                                </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 539px;">
+                                    <img loading="lazy" src="./static/img/samples/kidney_preset2_2/gt.png">
+                                    <div class="bal-beforePosition beforeLabel">
+                                        Ground Truth
+                                    </div>
+                                    <div class="bal-beforePosition beforeSize">
+                                        3.6 GB
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="content">
+                        <div class="bal-container-small image-compare">
+
+                            <div class="bal-after">
+                                <img loading="lazy" src="./static/img/samples/whole_body_preset3_2/render.png">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                    Ours
+                                </div>
+                                <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    7.8 MB
+                                </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 539px;">
+                                    <img loading="lazy" src="./static/img/samples/whole_body_preset3_2/gt.png">
+                                    <div class="bal-beforePosition beforeLabel">
+                                        Ground Truth
+                                    </div>
+                                    <div class="bal-beforePosition beforeSize">
+                                        200 MB
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                            </div>
+
+                        </div>
+
+                        <div class="bal-container-small image-compare">
+
+                            <div class="bal-after">
+                                <img loading="lazy" src="./static/img/samples/skull_preset1_4/render.png">
+                                <div class="bal-afterPosition afterLabel" style="z-index:1;">
+                                    Ours
+                                </div>
+                                <div class="bal-afterPosition afterSize" style="z-index:1;">
+                                    2.1 MB
+                                </div>
+                            </div>
+
+                            <div class="bal-before" style="width:96.4968152866242%;">
+                                <div class="bal-before-inset" style="width: 539px;">
+                                    <img loading="lazy" src="./static/img/samples/skull_preset1_4/gt.png">
+                                    <div class="bal-beforePosition beforeLabel">
+                                        Ground Truth
+                                    </div>
+                                    <div class="bal-beforePosition beforeSize">
+                                        64 MB
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bal-handle" style="left:96.4968152866242%;">
+                                <span class=" handle-left-arrow"></span>
+                                <span class="handle-right-arrow"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--/ Visual Effects. -->
+            </div>
+            <!--/ Matting. -->
+
+
+
+        </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@misc{niedermayr2024novel,
+    title={Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive Displays},
+    author={Simon Niedermayr and Christoph Neuhauser and Kaloian Petkov and Klaus Engel and Rüdiger Westermann},
+    year={2024},
+    eprint={2404.11285},
+    archivePrefix={arXiv},
+    primaryClass={cs.GR}
+}</code></pre>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <a class="icon-link" href="">
+                    <i class="fas fa-file-pdf"></i>
+                </a>
+                <a class="icon-link" href="https://github.com/KeKsBoTeR" class="external-link" disabled>
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            Website source code inspired from <a href="https://keunhong.com">Keunhong Park</a>'s <a
+                                href="https://github.com/nerfies/nerfies.github.io">Nerfies website</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        for (var elm of document.querySelectorAll(".image-compare")) {
+            new BeforeAfter(elm)
+        }
+        var options = {
+            slidesToScroll: 1,
+            slidesToShow: 3,
+            loop: true,
+            infinite: true,
+            autoplay: false,
+            autoplaySpeed: 3000,
+        }
+
+        // Initialize all div with carousel class
+        var carousels = bulmaCarousel.attach('.carousel', options);
+
+        for (var i = 0; i < carousels.length; i++) {
+            // Add listener to  event
+            carousels[i].on('before:show', () => { });
+        }
+    </script>
+</body>
+
+</html>
