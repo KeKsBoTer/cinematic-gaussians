@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive Displays</title>
+    <title>Application of 3D Gaussian Splatting for Cinematic Anatomy on Consumer Class Devices</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/jpg" href="./static/img/icon.png">
@@ -55,8 +55,7 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 is-size-3-mobile publication-title">Novel View Synthesis for Cinematic
-                            Anatomy on Mobile and Immersive Displays</h1>
+                        <h1 class="title is-1 is-size-3-mobile publication-title">Application of 3D Gaussian Splatting for Cinematic Anatomy on Consumer Class Devices</h1>
                         <div class="is-size-5 publication-authors">
                             <span class="author-block">
                                 <a href="https://www.cs.cit.tum.de/en/cg/people/niedermayr/">Simon
@@ -139,23 +138,12 @@
                 <div class="column is-four-fifths">
                     <h2 class="title is-3">Abstract</h2>
                     <div class="content has-text-justified">
-                        Interactive photorealistic visualization of 3D anatomy (i.e., Cinematic Anatomy) is used in
-                        medical education to explain the structure of
-                        the human body. It is currently restricted to frontal teaching scenarios, where the
-                        demonstrator needs a powerful GPU and high-speed
-                        access to a large storage device where the dataset is hosted. We demonstrate the use of
-                        novel view synthesis via compressed 3D
-                        Gaussian splatting to overcome this restriction and to enable students to perform cinematic
-                        anatomy on lightweight mobile devices
-                        and in virtual reality environments. We present an automatic approach for finding a set of
-                        images that captures all potentially seen
-                        structures in the data. By mixing closeup views with images from a distance, the splat
-                        representation can recover structures up to the
-                        voxel resolution. The use of Mip-Splatting enables smooth transitions when the focal length
-                        is increased. Even for GB datasets, the
-                        final renderable representation can usually be compressed to less than 70 MB, enabling
-                        interactive rendering on low-end devices using
-                        rasterization.
+                        Interactive photorealistic rendering of 3D anatomy is used in medical education to explain the structure of the human body.
+It is currently restricted to frontal teaching scenarios, where even with a powerful GPU and high-speed access to a large storage device where the data set is hosted, interactive demonstrations can hardly be achieved.
+We present the use of novel view synthesis via compressed 3D Gaussian Splatting (3DGS) to overcome this restriction, and to even enable students to perform cinematic anatomy on lightweight and mobile devices. 
+<br>
+Our proposed pipeline first finds a set of camera poses that captures all potentially seen structures in the data. High-quality images are then generated with path tracing and converted 
+into a compact 3DGS representation, consuming < 70 MB even for data sets of multiple GBs. This allows for real-time photorealistic novel view synthesis that recovers structures up to the voxel resolution and is almost indistinguishable from the path-traced images.
                     </div>
                 </div>
             </div>
@@ -622,7 +610,7 @@
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
             <pre><code>@misc{niedermayr2024novel,
-    title={Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive Displays},
+    title={Application of 3D Gaussian Splatting for Cinematic Anatomy on Consumer Class Devices},
     author={Simon Niedermayr and Christoph Neuhauser and Kaloian Petkov and Klaus Engel and Rüdiger Westermann},
     year={2024},
     eprint={2404.11285},
