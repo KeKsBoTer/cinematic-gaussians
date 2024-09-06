@@ -1,0 +1,21 @@
+name: cin3dgs
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - plyfile
+  - python
+  - pip
+  - pytorch-cuda=12.1
+  - cuda-toolkit=12.1
+  - torchvision
+  - tqdm
+  - matplotlib
+  - pip:
+    - submodules/diff-gaussian-rasterization
+    - submodules/simple-knn
+    - submodules/simple-nn
+    - openexr
+    - tensorboard
