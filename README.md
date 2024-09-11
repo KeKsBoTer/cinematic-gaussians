@@ -1,7 +1,8 @@
 
 <div align="center" >
 
-# Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive Displays
+# Application of 3D Gaussian Splatting for Cinematic Anatomy on Consumer Class Devices
+
 
 
 <font size="4">
@@ -30,7 +31,7 @@ Interactive photorealistic visualization of 3D anatomy (i.e., Cinematic Anatomy)
 If you find our work useful, please cite:
 ```
 @misc{niedermayr2024novel,
-    title={Novel View Synthesis for Cinematic Anatomy on Mobile and Immersive Displays},
+    title={Application of 3D Gaussian Splatting for Cinematic Anatomy on Consumer Class Devices},
     author={Simon Niedermayr and Christoph Neuhauser and Kaloian Petkov and Klaus Engel and Rüdiger Westermann},
     year={2024},
     eprint={2404.11285},
