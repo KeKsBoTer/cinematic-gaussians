@@ -82,3 +82,7 @@ python compress.py \\
 ```
 
 This script will also evaluate the scene on the training and test images and report PSNR and SSIM.
+
+## View Selection
+
+The code for the view selection can be found [here](https://github.com/chrismile/vpt_denoise/tree/main/pydens2d)
